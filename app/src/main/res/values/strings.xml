@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RockPaperScissors_Game</string>
+    <string name="image_player">image_player</string>
+    <string name="image_computer">image_computer</string>
+    <string name="textView_computer">Computer</string>
+    <string name="textView_player">Player</string>
+    <string name="button1_rock">Rock</string>
+    <string name="button2_paper">Paper</string>
+    <string name="button3_scissors">Scissors</string>
+</resources>
