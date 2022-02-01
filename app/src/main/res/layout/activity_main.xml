@@ -8,27 +8,27 @@
 
     <ImageView
         android:id="@+id/imageView_player"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="60dp"
         android:contentDescription="@string/image_player"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ImageContrastCheck"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/paper" />
 
     <ImageView
         android:id="@+id/imageView_computer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="40dp"
         android:contentDescription="@string/image_computer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_player"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/rock" />
 
     <TextView
         android:id="@+id/textView_player"
@@ -36,6 +36,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/textView_player"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_player" />
@@ -46,39 +49,56 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/textView_computer"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_computer" />
 
     <Button
         android:id="@+id/button1_rock"
-        android:layout_width="120dp"
+        android:layout_width="110dp"
         android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="20dp"
         android:text="@string/button1_rock"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_computer" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_score" />
 
     <Button
         android:id="@+id/button2_paper"
-        android:layout_width="120dp"
+        android:layout_width="110dp"
         android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/button2_paper"
         app:flow_horizontalAlign="center"
+        app:layout_constraintEnd_toStartOf="@+id/button3_scissors"
         app:layout_constraintStart_toEndOf="@+id/button1_rock"
-        app:layout_constraintTop_toBottomOf="@+id/textView_computer" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_score" />
 
     <Button
         android:id="@+id/button3_scissors"
-        android:layout_width="120dp"
+        android:layout_width="110dp"
         android:layout_height="50dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="18dp"
         android:text="@string/button3_scissors"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintStart_toEndOf="@+id/button2_paper"
+        app:layout_constraintTop_toBottomOf="@+id/textView_score" />
+
+    <TextView
+        android:id="@+id/textView_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/textView_score"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_computer" />
 </androidx.constraintlayout.widget.ConstraintLayout>
